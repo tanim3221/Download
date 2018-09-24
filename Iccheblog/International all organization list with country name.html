@@ -1079,181 +1079,180 @@ WHO উদ্দেশ্যঃ<br>
 </div>
     </div>
 </div>
-<style>
-	body{
-	margin:0px!important;
-	}	
-	
-	.details p {
+
+<style> 
+
+body {
+    margin: 0px!important;
+}
+
+.details p {
     border-left: 6px solid #4285f4;
     padding-left: 13px;
 }
-    .shortcode-message {
-        margin: 10px 0;
-        display: block;
-        position: relative;
-        overflow: hidden;
-        -o-border-radius: 2px;
-        -ms-border-radius: 2px;
-        -webkit-border-radius: 2px;
-        border-radius: 2px;
-    }
-    
-    .shortcode-message .message-title {
-        background-color: #666;
-        color: #fff;
-        font-weight: bold;
-    }
-    
-    .shortcode-message .message-content {
-        background: #f1f6144d;
-        text-align: left;
-    }
-    
-    .shortcode-message > div {
-        display: block;
-        margin: 0;
-        padding: 10px 15px;
-    }
-    
-    .btn {
-        margin: 6px;
-    }
-    /* [Object] Modal
+
+.shortcode-message {
+    margin: 10px 0;
+    display: block;
+    position: relative;
+    overflow: hidden;
+    -o-border-radius: 2px;
+    -ms-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+}
+
+.shortcode-message .message-title {
+    background-color: #666;
+    color: #fff;
+    font-weight: bold;
+	font-size: 13px;
+}
+
+.shortcode-message .message-content {
+    background: #f1f6144d;
+    text-align: left;
+}
+
+.shortcode-message > div {
+    display: block;
+    margin: 0;
+    padding: 10px 15px;
+}
+
+.btn {
+    margin: 6px;
+}
+
+
+/* [Object] Modal
  * =============================== */
-    
-    .modal {
-        opacity: 0;
-        visibility: hidden;
-        position: fixed;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        text-align: left;
-        transition: opacity .25s ease;
-    }
-    
-    .modal__bg {
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        cursor: pointer;
-    }
-    
-    .modal-state {
-        display: none;
-    }
-    
-    .modal-state:checked + .modal {
-        opacity: 1;
-        visibility: visible;
-    }
-    
-    .modal-state:checked + .modal .modal__inner {
-        top: 50px;
-    }
-    
-    .modal__inner {
-        transition: top .25s ease;
-        position: absolute;
-              right: 0;
-        bottom: 0;
-        left: 0;
-        width: 50%;
-        margin: auto;
-        overflow: auto;
-        background: #fff;
-        border-radius: 5px;
-        padding: 1em 2em;
-        height: 60%;
-    }
-    
-    .modal__close {
-        position: absolute;
-        right: 1em;
-        top: 1em;
-        width: 1.1em;
-        height: 1.1em;
-        cursor: pointer;
-    }
-    
-    .modal__close:after,
-    .modal__close:before {
-        content: '';
-        position: absolute;
-        width: 5px;
-        height: 1.5em;
-        background: #4285f4;
-        display: block;
-        transform: rotate(45deg);
-        left: 50%;
-        margin: -3px 0 0 -1px;
-        top: 0;
-    }
-    
-    .modal__close:hover:after,
-    .modal__close:hover:before {
-        background: #aaa;
-    }
-    
-    .modal__close:before {
-        transform: rotate(-45deg);
-    }
-    
-    @media screen and (max-width: 768px) {
-  .modal__inner {
-            width: 90%;
-            height: 50%;
-            box-sizing: border-box;
-        }
-.shortcode-message .message-title, .modal__inner h2 {
-    font-size: 13px;
+
+.modal {
+    opacity: 0;
+    visibility: hidden;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    text-align: left;
+    transition: opacity .25s ease;
 }
-.btn, .modal__inner h3, p {
-    font-size: 12px;
+
+.modal__bg {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    cursor: pointer;
 }
-.modal__close:after, .modal__close:before {
-    width: 4px;
-	    }
-	    .modal__close {
-    font-size: 13px;
+
+.modal-state {
+    display: none;
 }
-	}
-    /* Other
- * =============================== */
-       
-    .btn {
-        cursor: pointer;
+
+.modal-state:checked + .modal {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal-state:checked + .modal .modal__inner {
+    top: 50px;
+}
+
+.modal__inner {
+    transition: top .25s ease;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    overflow: auto;
+    background: #fff;
+    border-radius: 5px;
+    padding: 1em 2em;	
+	width: 90%;
+    height: 50%;
+    box-sizing: border-box;
+}
+
+.modal__inner h2 {
+        font-size: 15px;
         background: #27ae60;
         display: inline-block;
         padding: .5em 1em;
         color: #fff;
         border-radius: 3px;
-    }
-    
-    .btn:hover,
-    .btn:focus {
-        background: #2ecc71;
-    }
-    
-    .btn:active {
-        background: #27ae60;
-        box-shadow: 0 1px 2px rgba(0, 0, 0, .2) inset;
-    }
-    
-    .btn--blue:active {
-        background: #2980b9;
-    }
-    
-    p img {
-        max-width: 200px;
-        height: auto;
-        float: left;
-        margin: 0 1em 1em 0;
-    }
-	
+}
+.modal__close {
+    position: absolute;
+    right: 1em;
+    top: 1em;
+    width: 1.1em;
+    height: 1.1em;
+    cursor: pointer;
+	font-size: 13px;
+}
 
+.modal__close:after,
+.modal__close:before {
+    content: '';
+    position: absolute;
+    width: 4px;
+    height: 1.5em;
+    background: #4285f4;
+    display: block;
+    transform: rotate(45deg);
+    left: 50%;
+    margin: -3px 0 0 -1px;
+    top: 0;
+}
+
+.modal__close:hover:after,
+.modal__close:hover:before {
+    background: #aaa;
+}
+
+.modal__close:before {
+    transform: rotate(-45deg);
+}
+
+/* Other
+ * =============================== */
+
+.btn {
+    cursor: pointer;
+    background: #27ae60;
+    display: inline-block;
+    padding: .5em 1em;
+    color: #fff;
+    border-radius: 3px;
+}
+
+.btn:hover,
+.btn:focus {
+    background: #2ecc71;
+}
+
+.btn:active {
+    background: #27ae60;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, .2) inset;
+}
+
+.btn--blue:active {
+    background: #2980b9;
+}
+
+p img {
+    max-width: 200px;
+    height: auto;
+    float: left;
+    margin: 0 1em 1em 0;
+}
+.btn,.modal__inner h3, p {
+        font-size: 12px;
+    }
+    
 </style>
